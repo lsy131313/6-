@@ -1,18 +1,41 @@
-h1 {
-  color: #0829a3;
-  font-size: 28px;
-}
+<!DOCTYPE html>
+<!-- 작성일: 2026-09-30 11:22 (KST) -->
+<!-- 수정일: 2026-09-30 11:45 (KST) -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>웹개발 0930 _3</title>
+    <style>
+      /* CSS: 부모에게 flex 지시 */
+      #container {
+        display: flex;
+        flex-direction: row; /* 기본: 가로로 나란히 */
+        justify-content: center;
+        gap: 12px;
+      }
 
+      @media (max-width: 600px) {
+        #container {
+          flex-direction: column; /* 화면이 좁아지면 세로로 */
+        }
+      }
 
-p {
-  width: 470px;
-  padding: 40px;          
-  border: 3px dashed #0829a3; 
-  margin: 50px;             
-  background: #dce1ec;    
-}
+      /* 박스가 눈에 보이도록 테두리와 여백 추가 */
+      #container div {
+        border: 1px solid;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
 
-.container {
-  display: flex;
-  gap: 50px;
-}
+    <!-- HTML: 박스 3개를 감싸는 부모 -->
+    <div id="container">
+      <div>박스1</div>
+      <div>박스2</div>
+      <div>박스3</div>
+    </div>
+
+  </body>
+</html>
